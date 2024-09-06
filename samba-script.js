@@ -10,13 +10,13 @@ document.getElementById('attendanceForm').addEventListener('submit', function(ev
     };
 
     // Make a POST request to the Google Apps Script URL
-    fetch('https://script.google.com/macros/s/AKfycbwnvccRkdCIHVJhyImBpfJU7ia390iUPt1FSL46xi4azAm5ceCR7PBU2R_b9btGw88lyA/exec', { // Replace with your actual Apps Script URL
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
+   fetch('https://script.google.com/macros/s/AKfycbwnvccRkdCIHVJhyImBpfJU7ia390iUPt1FSL46xi4azAm5ceCR7PBU2R_b9btGw88lyA/exec', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
     .then(response => response.json())
     .then(result => {
         if (result.status === 'success') {
